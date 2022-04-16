@@ -1,0 +1,16 @@
+role: guest
+1. Home
+2. Login
+3. Apply Now
+4. Activities
+
+role: user
+1. Home
+2. Activities
+3. Logout
+
+role: admin
+1. Home
+2. Apply Now
+3. Activities
+4. Logout
