@@ -1,0 +1,171 @@
+html {
+    font-size: 10px;
+}
+
+header h1 {
+    font-family: 'Rampart One', cursive;
+    text-align: center;
+}
+
+h1 {
+    font-family: 'Rampart One', cursive;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #F5B7B1;
+    text-align: center;
+    margin-top: 25vh;
+}
+
+main {
+    background-color: #EC7063;
+    padding: 80px;
+    margin: 20px;
+    text-align: center;
+    width: 80em;
+}
+
+nav {
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    background-color: #BFC9CA;
+    margin: 0px;
+    padding: 0px;
+    border: 10px solid #85929E;
+    box-sizing: border-box;
+}
+
+nav h2 {
+    text-align: center;
+}
+
+nav ul {
+    display: flex;
+    list-style-type: none;
+    align-items: center;
+    justify-content: center;
+}
+
+nav ul li {
+    display: block;
+    margin: 10px;
+    padding: 20px;
+}
+
+nav ul li.active {
+    background-color: #04AA6D;
+}
+
+nav ul li:hover {
+    background-color: white;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+}
+
+nav ul li a:visited {
+    color: red;
+}
+
+footer {
+    text-align: center;
+    font-size: 20px;
+    padding: 8px;
+    color: black;
+}
+
+table,
+td,
+th {
+    text-align: left;
+    padding: 20px;
+    border: 3px solid black;
+    border-collapse: collapse;
+}
+
+caption {
+    font-weight: bold;
+    text-align: left;
+    font-size: 200%;
+}
+
+table.center {
+    width: 70%;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+tr:nth-child(3n+1) td {
+    background-color: #D5DBDB;
+}
+
+tr:nth-child(3n+2) td {
+    background-color: #95A5A6;
+}
+
+tr:nth-child(3n) td {
+    background-color: white;
+}
+
+input:required:focus:invalid {
+    background-color: red;
+}
+
+input:required:valid {
+    background-color: green; 
+}
+
+            .dialog {
+            display : none;
+            }
+
+            .showUnfixed {
+            display : block;
+            }
+
+            .show {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            background-color : rgba(0, 0, 255, 0.4);
+            display : block;
+            }
+
+            .innerTextUnfixed {
+            width: 500px;
+            height: 200px;
+            padding: 5%;
+            background-color : yellow;
+            }
+
+            .innerText {
+            position: fixed;
+            width: 500px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -250px;
+            padding: 5%;
+            background-color : yellow;
+            }
+
+            .wrapper {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 10em auto;
+            font-size: 15px;
+            }
+
+            label {
+            text-align: right;
+            }
