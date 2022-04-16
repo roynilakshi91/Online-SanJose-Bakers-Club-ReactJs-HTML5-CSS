@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+    <!-- English -->
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+        <link href="club.css" rel="stylesheet" type="text/css">
+        <title>Login Page</title>
+        <style>
+            .box{
+            border: 5px solid Black;
+            height: 1000px;
+            width: 500px;
+            padding: 5%;
+            background-color : #D5DBDB ;
+            }
+            .box_1{
+            border: 2px dotted Black;
+            height: 800px;
+            width: 400px;
+            padding: 5%;
+            background-color : white ;
+            }
+            .svg_1 {
+            height: 800px;
+            width: 400px;
+            }
+            .text {
+            font-weight: bold;
+            text-align: center;
+            font-style: italic;
+            font-size: 20px;
+            }
+            input:required:focus:invalid {
+            background-color: red;
+            }
+            input:required:valid {
+            background-color: green; 
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Login Page</h1>
+            <nav>
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li class="active"><a href="LoginPage.html">Login</a></li>
+                    <li><a href="apply.html">Apply Now</a></li>
+                    <li><a href="ActivityPage.html">Activities</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1> Login Form </h1>
+            <form>  
+                <label>Username : </label> 
+                <input type="text" name="username" required minlength="6" maxlength="25" >  
+                <label>Password : </label>   
+                <input type="password" name="password" required minlength="12" maxlength="25">  
+                <button type="submit">Login</button>   
+            </form>
+        </main>
+        <p> </p>
+        <section class ="box">
+            <p class = "text"> Doodle Fun </p>
+            <form>  
+                <button type="button" id="Add">Add</button>  
+                <button type="button" id="Clear">Clear</button>  
+            </form>
+            <p> </p>
+            <section class = "box_1">
+                <svg class = "svg_1" id = "MyDrawing"></svg>
+            </section>
+        </section>
+        <footer>&copy; 2021 San Jose Creative Bakers Club</footer>
+        <script>
+            mySvg = document.getElementById("MyDrawing");
+            let maxSize = 100;
+            clear = document.getElementById("Clear");
+            add = document.getElementById("Add");
+            
+            function randomInteger(min, max) {
+              return Math.floor(Math.random() * (max - min + 1)) + min;
+            }
+            
+            add.addEventListener("click", function () {
+                let svgPt = mySvg.createSVGPoint();
+                svgPt.x = randomInteger(0, 300);
+                svgPt.y = randomInteger(0, 700);
+            
+                console.log("SVG Add click!");
+                console.log(svgPt);
+            
+                // Create element with random properties based at click location
+                let width = Math.random() * maxSize;
+                let height = Math.random() * maxSize;
+                let rectangle = document.createElementNS("http://www.w3.org/2000/svg", "rect");
+                rectangle.setAttribute("x", svgPt.x);
+                rectangle.setAttribute("y", svgPt.y);
+                rectangle.setAttribute("width", width);
+                rectangle.setAttribute("height", height);
+                let colorStr = `rgb(${255 * Math.random()}, ${255 * Math.random()}, ${255 * Math.random()})`;
+                rectangle.setAttribute("fill", colorStr);
+                rectangle.setAttribute("fill-opacity", 0.7);
+                mySvg.appendChild(rectangle);
+            });
+            
+            clear.addEventListener("click", function () {
+                mySvg.innerHTML = "";
+            });
+            
+        </script>
+    </body>
+</html>
