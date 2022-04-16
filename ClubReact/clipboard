@@ -1,0 +1,82 @@
+<Menu role={this.state.role} show={this.state.show} showHome={this.homeHandler.bind(this)} showLogin={this.loginHandler.bind(this)} showApply={this.applyHandler.bind(this)} showActivities={this.activitiesHandler.bind(this)} showLogout={this.logoutHandler.bind(this)}/>
+
+
+
+            .dialog {
+            display : none;
+            }
+
+            .showUnfixed {
+            display : block;
+            }
+
+            .show {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            background-color : rgba(0, 0, 255, 0.4);
+            display : block;
+            }
+
+            .innerTextUnfixed {
+            width: 500px;
+            height: 200px;
+            padding: 5%;
+            background-color : yellow;
+            }
+
+            .innerText {
+            position: fixed;
+            width: 500px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -250px;
+            padding: 5%;
+            background-color : yellow;
+            }
+
+            .wrapper {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 10em auto;
+            font-size: 15px;
+            }
+
+            label {
+            text-align: right;
+            }
+
+
+
+            <form id="form" className="wrapper">
+            <label>Name:</label>
+            <input type="text" id="name" name="name"
+             required minLength="6" maxLength="25"
+             value={this.state.name}
+             onInput={(event) => this.setState({ name: event.target.value })}></input>
+            <label>Dates:</label>
+            <input type="text" id="dates" name="dates" required minLength="8" maxLength="30"
+            value={this.state.dates}
+            onInput={(event) => this.setState({ dates: event.target.value })}></input>
+            <label>Description:</label>
+            <input type="text" id="descr" name="descr" required minLength="8" maxLength="25"
+            value={this.state.description}
+            onInput={(event) => this.setState({ description: event.target.value })}></input>
+            <button type="button" onClick={this.submitActivity.bind(this)}>Add</button>
+            </form>
+
+
+            <form id="form" className="wrapper">
+            <label>Name:</label>
+            <input type="text" id="name" name="name"
+             required minLength="6" maxLength="25"></input>
+            <label>Dates:</label>
+            <input type="text" id="dates" name="dates" required minLength="8" maxLength="30"></input>
+            <label>Description:</label>
+            <input type="text" id="descr" name="descr" required minLength="8" maxLength="25"></input>
+            <button type="button">Add</button>
+            </form>
