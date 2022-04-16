@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+        <link href="club.css" rel="stylesheet" type="text/css">
+        <title>Activities Page</title>
+        <script src="eventData.js"></script> 
+    </head>
+    <body>
+        <header>
+            <h1>Activity Page</h1>
+            <nav>
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="LoginPage.html">Login</a></li>
+                    <li><a href="apply.html">Apply Now</a></li>
+                    <li class="active"><a href="ActivityPage.html">Activities</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <h1>Activities</h1>
+            <img src="images/Activites.png" alt="Activity" width="400" height="500">
+            <p><textarea rows="4" cols="50" placeholder="work in progress"></textarea> </p>
+            <table>
+                <caption>
+                    <p><b>Activity Schedule</b></p>
+                </caption>
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Date</th>
+                        <th>Description</th>
+                    </tr>
+                </thead>
+                <tbody id = "TableBody">
+                </tbody>
+            </table>
+            <p>
+                <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(4 2)">
+                        <path d="m2.5 6.5h6c1.1045695 0 2 .8954305 2 2v2.5c0 2.4852814-2.01471863 4.5-4.5 4.5h-1c-2.48528137 0-4.5-2.0147186-4.5-4.5v-2.5c0-1.1045695.8954305-2 2-2zm8 2h1c1.1045695 0 2 .8954305 2 2s-.8954305 2-2 2h-1"/>
+                        <path d="m4.5 4.5v-4"/>
+                        <path d="m6.5 4.5v-2"/>
+                    </g>
+                </svg>
+                <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd" transform="translate(2 2)">
+                        <circle cx="8.5" cy="8.5" r="8" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                        <circle cx="6" cy="6" fill="currentColor" r="1"/>
+                        <circle cx="11" cy="6" fill="currentColor" r="1"/>
+                        <path d="m5.5 9.5c.60286458 1.3333333 1.60286458 2 3 2s2.3971354-.6666667 3-2" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"/>
+                    </g>
+                </svg>
+                <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+                    <path d="m16.5 1.59090909c-1.3333333-.72727273-2.6666667-1.09090909-4-1.09090909s-2.66666667.36363636-4 1.09090909v9.90909091c1.33333333-.6666667 2.6666667-1 4-1s2.6666667.3333333 4 1zm-8 0c-1.33333333-.72727273-2.66666667-1.09090909-4-1.09090909s-2.66666667.36363636-4 1.09090909v9.90909091c1.33333333-.6666667 2.66666667-1 4-1s2.66666667.3333333 4 1z" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(2 5)"/>
+                </svg>
+                <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(3 3)">
+                        <path d="m14 1c.8284271.82842712.8284271 2.17157288 0 3l-9.5 9.5-4 1 1-3.9436508 9.5038371-9.55252193c.7829896-.78700064 2.0312313-.82943964 2.864366-.12506788z"/>
+                        <path d="m6.5 14.5h8"/>
+                        <path d="m12.5 3.5 1 1"/>
+                    </g>
+                </svg>
+                <svg height="21" viewBox="0 0 21 21" width="21" xmlns="http://www.w3.org/2000/svg">
+                    <g fill="none" fill-rule="evenodd" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" transform="translate(1 4)">
+                        <path d="m3.5 3.165h9"/>
+                        <path d="m4.48122025 6.20339509 1-.01878307c.5127454-.00963092.94259192.36840352 1.00968673.86456969l.00909302.13525035v.9832835c0 .54496455-.4363518.98958934-.98122025.99982364l-1 .01878306c-.5127454.00963093-.94259192-.36840352-1.00968673-.86456968l-.00909302-.13525396v-.98327989c0-.54496455.4363518-.98958935.98122025-.99982364z"/>
+                        <path d="m2.5.1507576h11c1.1045695 0 2 .8954305 2 2v10.0147186h-13c-1.1045695 0-2-.8954305-2-2v-8.0147186c0-1.1045695.8954305-2 2-2z"/>
+                        <path d="m8.5 6.165h4"/>
+                        <path d="m8.5 9.165h4"/>
+                        <path d="m15 12.1654762c1.3807119 0 2.5-1.1192881 2.5-2.49999998v-6.5h-2"/>
+                    </g>
+                </svg>
+            </p>
+            <h2>Type</h2>
+            <p>Evening coffee time sharing baked goods</p>
+            <p>Meeting people from other groups during evening walks</p>
+            <p>Sharing recipes with each other</p>
+            <p>Brainstorming and writing blogs/recipes</p>
+            <p>Reading news feed together</p>
+        </main>
+        <footer>&copy; 2021 San Jose Creative Bakers Club</footer>
+        <script>
+            tableBodySection = document.getElementById("TableBody");
+
+            function createTableRow(eventObj) {
+                let tr = `<tr><td>${eventObj.name}</td><td>${eventObj.dates}</td><td>${eventObj.description}</td></tr>`;
+                return tr;
+            };
+
+            function addTableRow(eventName) {
+                let eventInfo = events.find(function(info) {
+                    return info.name === eventName;
+                });
+
+                if (eventInfo) {
+                    eventRow = createTableRow(eventInfo);
+                    newTR = document.createElement("tr");
+                    tableBodySection.appendChild(newTR);
+                    newTR.outerHTML = eventRow;
+                } else {
+                    alert(`Event: ${eventName} was not found`);
+                }
+            };
+
+            function addAll() {
+                events.forEach(function(event) {
+                    addTableRow(event.name);
+                });
+            }
+            
+            addAll();    
+        </script>
+    </body>
+</html>
