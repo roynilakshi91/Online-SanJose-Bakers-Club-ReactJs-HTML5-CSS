@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Join Us!</title>
+        <link href="https://fonts.googleapis.com/css2?family=Rampart+One&family=Roboto:ital,wght@1,100&display=swap" rel="stylesheet">
+        <link href="club.css" rel="stylesheet" type="text/css">
+        <style>
+            input:required:invalid {
+            background-color: red;
+            }
+            input:required:valid {
+            background-color: green; 
+            }
+            .dialog {
+            display : none;
+            }
+            .show {
+            position: fixed;
+            top: 0px;
+            left: 0px;
+            height: 100%;
+            width: 100%;
+            background-color : rgba(0, 0, 255, 0.4);
+            display : block;
+            }
+            .innerText {
+            position: fixed;
+            width: 500px;
+            height: 200px;
+            top: 50%;
+            left: 50%;
+            margin-top: -100px;
+            margin-left: -250px;
+            padding: 5%;
+            background-color : yellow;
+            }
+
+            .wrapper {
+            display: grid;
+            gap: 10px;
+            grid-template-columns: 10em auto;
+            font-size: 15px;
+            }
+
+            label {
+            text-align: right;
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>Join Us!</h1>
+            <nav>
+                <h2>Navigation</h2>
+                <ul>
+                    <li><a href="index.html">Homepage</a></li>
+                    <li><a href="LoginPage.html">Login</a></li>
+                    <li class="active"><a href="apply.html">Apply Now</a></li>
+                    <li><a href="ActivityPage.html">Activities</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+        <form id="form" class="wrapper">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required minlength="6" maxlength="25">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required minlength="10" maxlength="30">
+            <label for="pw">Password:</label>
+            <input type="password" id="pw" name="pw" required minlength="8" maxlength="25">
+            <label for="level"> Level </label>
+            <select name="level" id="level">
+                <option value="Beginner">Beginner</option>
+                <option value="Intermediate">Intermediate</option>
+                <option value="Proficient">Proficient</option>
+            </select>
+            <label for="comment">Comments:</label>
+            <textarea id="comment" name="comment"></textarea>
+            <button id="button">Apply</button>
+        </form>
+        <br>
+        <section class="dialog" id="ThanksDialog"></section>
+        </main>
+        <footer>&copy; 2021 San Jose Creative Bakers Club</footer>
+        <script>
+            formElement = document.getElementById("form");
+            dialogElement = document.getElementById("ThanksDialog");
+            formElement.addEventListener("submit", function(event) {
+                console.log("Button clicked!");
+                if (dialogElement.innerHTML != "") {
+                    dialogElement.innerHTML = "";
+                }
+                dialogElement.className = "show";
+                name = document.getElementById("name").value;
+                email = document.getElementById("email").value;
+                level = document.getElementById("level").value;
+                console.log("Name: " + name + " Email: " + email + " Level: " + level);
+                newDiv = document.createElement("div");
+                dialogElement.appendChild(newDiv);
+                newDiv.outerHTML = `<div class="innerText"><h1>Thanks for Signing Up</h1><p>Your Name: ${name}<br>Email: ${email}<br>Level: ${level}</p><button type="button" id="close">Close</button></div>`;
+                closeElement = document.getElementById("close");
+                closeElement.addEventListener("click", function() {
+                    dialogElement.innerHTML = "";
+                    dialogElement.className = "dialog";
+                });
+                event.preventDefault();
+            });
+            
+        </script>
+    </body>
+</html>
